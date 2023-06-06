@@ -1,4 +1,4 @@
-const {Datatypes} = require("sequelize");
+const {DataTypes} = require("sequelize");
 const { db } = require("../database/config");
 
 const User = db.define('users', {
@@ -6,30 +6,30 @@ const User = db.define('users', {
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
-        type:Datatypes.INTEGER,
+        type:DataTypes.INTEGER,
         
     },
     username:{
-        tpye:Datatypes.STRING,
+        type:DataTypes.STRING,
         allowNull: false,
     },
     email:{
-        type: Datatypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true
 
     },
     password:{
-        type:Datatypes.STRING,
+        type:DataTypes.STRING,
         allowNull: false,
     },
     role:{
-        type:Datatypes.ENUM('client','employee'),
+        type:DataTypes.ENUM('client','employee'),
         allowNull: false,
         defaultvalue:"cient",
     },
     status:{
-        type: Datatypes.BOOLEAN,
+        type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: true,
     }

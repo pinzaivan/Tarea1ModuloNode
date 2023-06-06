@@ -1,4 +1,4 @@
-const {sequalize, Sequelize} = require('sequelize');
+const {Sequelize} = require('sequelize');
 
 const db = new Sequelize({
     dialect: 'postgres',
@@ -10,5 +10,6 @@ const db = new Sequelize({
     logging: false,
     
 });
+
 
 module.exports = {db}
